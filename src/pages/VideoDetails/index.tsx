@@ -9,8 +9,8 @@ import { fetchDataFromApi } from "../../utils/api";
 import { SuggestionVideoCard } from "../../components/SuggestionVideoCard";
 
 export const VideoDetails: React.FC = () => {
-  const [video, setVideo] = useState();
-  const [relatedVideos, setRelatedVideos] = useState();
+  const [video, setVideo] = useState<any>();
+  const [relatedVideos, setRelatedVideos] = useState<any>();
   const { id } = useParams();
   const { setLoading } = useContext(Context);
 
