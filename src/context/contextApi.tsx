@@ -8,10 +8,10 @@ interface IAppContext {
 export const Context = createContext<any>({});
 
 export const AppContext: React.FC<IAppContext> = ({ children }) => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [searchResults, setSearchResults] = useState<boolean>(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>("New");
-  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  const [loading, setLoading] = useState(false);
+  const [searchResults, setSearchResults] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("New");
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
     fetchSelectedCategoryData(selectedCategory);
